@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Limkokwing Clubs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">Limkokwing University</div>
+      <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="clubs.html">Clubs</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Upcoming Events</h1>
+  <p>Stay updated with the latest club activities, performances, and competitions. Explore and participate!</p>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container" id="events-slideshow">
+    <div class="slide active">
+      <img src="images/event.jpg" alt="Drama Club Performance">
+      <div class="slide-caption">Drama Club Performance: Creativity & Expression</div>
+    </div>
+    <div class="slide">
+      <img src="images/tech2.jpg" alt="Tech Club Hackathon">
+      <div class="slide-caption">Tech Club Hackathon: Innovation & Coding Challenges</div>
+    </div>
+    <div class="slide">
+      <img src="images/event2.jpg" alt="Debate Club Session">
+      <div class="slide-caption">Debate Club Session: Critical Thinking & Persuasion</div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <span class="prev" onclick="changeSlide(-1, 'events-slideshow')">&#10094;</span>
+    <span class="next" onclick="changeSlide(1, 'events-slideshow')">&#10095;</span>
+
+    <p class="timestamp" id="events-timestamp"></p>
+  </div>
+</section>
+
+<!-- Info Section -->
+<section class="info-section">
+  <h2>Did You Know?</h2>
+  <p>
+    Clubs at Limkokwing University help students develop skills outside the classroom. 
+    Participation enhances teamwork, leadership, and creativity. Events range from performances 
+    and hackathons to competitions and debates, offering something for everyone. Join a club and make the most of your university experience!
+  </p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Limkokwing Clubs. All Rights Reserved</p>
+</footer>
+
+<!-- JS for Slideshow -->
+<script>
+  function changeSlide(n, slideshowId) {
+    const container = document.getElementById(slideshowId);
+    const slides = container.querySelectorAll('.slide');
+    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    slides[activeIndex].classList.remove('active');
+
+    let newIndex = activeIndex + n;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    if (newIndex >= slides.length) newIndex = 0;
+
+    slides[newIndex].classList.add('active');
+
+    // Optional: Update timestamp or caption if needed
+    const timestamp = container.querySelector('.timestamp');
+    if (timestamp) {
+      timestamp.textContent = `Slide ${newIndex + 1} of ${slides.length}`;
+    }
+  }
+</script>
+
+</body>
+</html>

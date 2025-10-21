@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Club | Limkokwing University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">Limkokwing University</div>
+      <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="clubs.html" class="active">Clubs</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero / Intro Section -->
+<section class="hero">
+  <h1>Welcome to the Tech Club</h1>
+  <p>
+    Innovation, coding, and creative problem-solving await you in the Student Tech Club! 
+    Whether you're a tech enthusiast, programmer, or curious beginner, this is your space to grow. 
+    Explore exciting projects, hackathons, and workshops while collaborating with a community of tech-minded 
+    peers. No experience? No problem. Bring your curiosity and passion—we’ll help you turn ideas into reality. 
+    Step into the world of technology: your journey starts here.
+  </p>
+  <button class="join-btn"><a href="https://clubs-h4az.vercel.app/">Join Now</a></button>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery">
+  <div class="gallery-item">
+    <h2>Our Previous Tech Events</h2>
+    <div class="slideshow-container" id="events-slideshow">
+      <div class="slide active"><img src="images/tech1.png" alt="Tech event picture 1"></div>
+      <div class="slide"><img src="images/tech2.jpg" alt="Tech event picture 2"></div>
+      <div class="slide"><img src="images/tech3.jpg" alt="Tech event picture 3"></div>
+
+      <a class="prev" onclick="changeSlide(-1, 'events-slideshow')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'events-slideshow')">&#10095;</a>
+      <p class="timestamp"></p>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <h2>Our Tech Workshops & Meetings</h2>
+    <div class="slideshow-container" id="meetings-slideshow">
+      <div class="slide active"><img src="images/tech4.jpg" alt="Tech workshop picture 1"></div>
+      <div class="slide"><img src="images/tech5.webp" alt="Tech workshop picture 2"></div>
+      <div class="slide"><img src="images/tech6.jpg" alt="Tech workshop picture 3"></div>
+
+      <a class="prev" onclick="changeSlide(-1, 'meetings-slideshow')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'meetings-slideshow')">&#10095;</a>
+      <p class="timestamp"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Limkokwing Clubs. All Rights Reserved | Current Time: <span id="live-clock"></span></p>
+</footer>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>

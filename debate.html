@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debate Club | Limkokwing University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">Limkokwing University</div>
+      <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="clubs.html" class="active">Clubs</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero / Intro Section -->
+<section class="hero">
+  <h1>Welcome to the Debate Club</h1>
+  <p>
+    Persuasion, critical thinking, and eloquent speaking await you in the Student Debate Club! 
+    Whether you're a confident speaker or just learning to express your ideas, this is your platform to shine. 
+    Participate in debates, public speaking sessions, and workshops while collaborating with peers who share your passion 
+    for discussion and argumentation. No experience? No problem. Bring your curiosity and confidence—we’ll help you 
+    sharpen your voice. Step up to the podium: your debating journey starts here.
+  </p>
+  <button class="join-btn"><a href="https://clubs-h4az.vercel.app/">Join Now</a></button>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery">
+  <div class="gallery-item">
+    <h2>Our Previous Debate Events</h2>
+    <div class="slideshow-container" id="events-slideshow">
+      <div class="slide active"><img src="images/debate1.webp" alt="Debate event picture 1"></div>
+      <div class="slide"><img src="images/debate2.webp" alt="Debate event picture 2"></div>
+      <div class="slide"><img src="images/debate3.jpg" alt="Debate event picture 3"></div>
+
+      <a class="prev" onclick="changeSlide(-1, 'events-slideshow')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'events-slideshow')">&#10095;</a>
+      <p class="timestamp"></p>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <h2>Our Debate Workshops & Meetings</h2>
+    <div class="slideshow-container" id="meetings-slideshow">
+      <div class="slide active"><img src="images/debate4.jpeg" alt="Debate workshop picture 1"></div>
+      <div class="slide"><img src="images/debate5.jpg" alt="Debate workshop picture 2"></div>
+      <div class="slide"><img src="images/debate6.jpg" alt="Debate workshop picture 3"></div>
+
+      <a class="prev" onclick="changeSlide(-1, 'meetings-slideshow')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'meetings-slideshow')">&#10095;</a>
+      <p class="timestamp"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Limkokwing Clubs. All Rights Reserved | Current Time: <span id="live-clock"></span></p>
+</footer>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
