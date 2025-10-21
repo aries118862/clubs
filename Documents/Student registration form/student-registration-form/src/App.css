@@ -1,7 +1,7 @@
 .App {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #1a1a2e, #16213e);
-  color: white;
+  color: #00aaff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
