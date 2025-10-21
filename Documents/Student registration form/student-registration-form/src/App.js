@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">🎭 Club Registration Form</h1>
+      <h1 className="title">Club Registration Form</h1>
       <form className="form-container" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Student Name:</label>
